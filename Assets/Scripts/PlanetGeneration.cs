@@ -39,7 +39,7 @@ public class PlanetGeneration : MonoBehaviour
         var planet = GetRandomPlanet();
         isGenerated = true;
         planet.GeneratePlanet();
-        player.gameObject.transform.position = planet.SpawnPoint.transform.position;
+        player.gameObject.transform.position = new Vector3(planet.SpawnPoint.gameObject.transform.position.x, planet.SpawnPoint.gameObject.transform.position.y, player.gameObject.transform.position.z);
         return planet;
         
     }

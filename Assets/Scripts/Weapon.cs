@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField]
     private Transform rayHit;
+    [SerializeField]
     private Transform rayOrigin;
+    [SerializeField]
     private float distance;
+    [SerializeField]
     private float reductionSpeed;
+    [SerializeField]
     private float minScale;
     private GameObject Res;
 
