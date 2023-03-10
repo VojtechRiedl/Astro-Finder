@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public Transform rayHit;
-    public Transform rayOrigin;
-    public float distance;
-    public float reductionSpeed;
-    public float minScale;
-    public GameObject Res;
+    private Transform rayHit;
+    private Transform rayOrigin;
+    private float distance;
+    private float reductionSpeed;
+    private float minScale;
+    private GameObject Res;
 
     // Start is called before the first frame update
     void Start()
