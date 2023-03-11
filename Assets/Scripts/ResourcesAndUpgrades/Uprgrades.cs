@@ -8,116 +8,271 @@ public class Uprgrades : MonoBehaviour
     [SerializeField]
     private GameObject globalVariables;
 
-    private Stats stats;
-    private Resources resources;
+    private Stats st;
+    private Resources rs;
     private void Awake()
     {
-        stats = globalVariables.GetComponent<Stats>();
-        resources = globalVariables.GetComponent<Resources>();
+        st = globalVariables.GetComponent<Stats>();
+        rs = globalVariables.GetComponent<Resources>();
     }
 
     public void MaxHealth1()
     {
-        if (resources.GetIron() >= 10)
+        if (rs.GetIron() >= 10)
         {
-            stats.AddMaxHealth(50);
-            resources.AddIron(-10);
+            st.AddMaxHealth(50);
+            rs.AddIron(-10);
         }
         
     }
     public void MaxHealth2()
     {
-        if (resources.GetIron() >= 10 && resources.GetCopper() >= 10)
-            stats.AddMaxHealth(50);
+        if (rs.GetIron() >= 10 && rs.GetCopper() >= 10)
+        {
+            st.AddMaxHealth(50);
+            rs.AddIron(-10);
+            rs.AddCopper(-10);
+        }
     }
     public void MaxHealth3()
     {
-        stats.AddMaxHealth(100);
+        if (rs.GetCopper() >= 10 && rs.GetIgnium() >= 5 && rs.GetIridium() >= 5)
+        {
+            st.AddMaxHealth(100);
+            rs.AddCopper(-10);
+            rs.AddIgnium(-5);
+            rs.AddIridium(-10);
+        }
     }
     public void Speed1()
     {
-        stats.AddSpeed(10);
+        if (rs.GetIron() >= 10 && rs.GetSensium() >= 10)
+        st.AddSpeed(10);
+        rs.AddIron(-10);
+        rs.AddSensium(-10);
     }
     public void Speed2()
     {
-        stats.AddSpeed(10);
+        if (rs.GetIridium() >= 10 && rs.GetUranium() >= 10)
+        {
+            st.AddSpeed(10);
+            st.AddRadResist(-10);
+            rs.AddIridium(-10);
+            rs.AddUranium(-10);
+        }
     }
     public void RadResist1()
     {
-        stats.AddRadResist(50);
+        if (rs.GetIron() >= 10 && rs.GetCopper() >= 10)
+        {
+            st.AddRadResist(50);
+            rs.AddIron(-10);
+            rs.AddCopper(-10);
+        }
     }
     public void RadResist2()
     {
-        stats.AddRadResist(40);
+
+        if (rs.GetIridium() >= 5 && rs.GetCopper() >= 10)
+        {
+            st.AddRadResist(40);
+            rs.AddIridium(-5);
+            rs.AddCopper(-10);
+        }
     }
     public void ColdResist1()
     {
-        stats.AddColdResist(50);
+
+        if (rs.GetIron() >= 10 && rs.GetIgnium() >= 15)
+        {
+            st.AddColdResist(50);
+            rs.AddIron(-10);
+            rs.AddIgnium(-15);
+        }
     }
     public void ColdResist2()
     {
-        stats.AddColdResist(40);
+
+        if (rs.GetIridium() >= 5 && rs.GetIgnium() >= 20)
+        {
+            st.AddColdResist(40);
+            rs.AddIridium(-5);
+            rs.AddIgnium(-20);
+        }
     }
     public void AcidResist1()
     {
-        stats.AddAcidResist(50);
+
+        if (rs.GetCopper() >= 20)
+        {
+            st.AddAcidResist(50);
+            rs.AddCopper(-20);
+        }
     }
     public void AcidResist2()
     {
-        stats.AddAcidResist(40);
+
+        if (rs.GetIridium() >= 5 && rs.GetCopper() >= 20)
+        {
+            st.AddAcidResist(40);
+            rs.AddIridium(-5);
+            rs.AddCopper(-20);
+        }
     }
 
     public void MinigSpeed1()
     {
-        stats.AddMiningSpeed(2);
+
+        if (rs.GetIron() >= 10 && rs.GetCopper() >= 10 && rs.GetIgnium() >= 10)
+        {
+            st.AddMiningSpeed(2);
+            rs.AddIron(-10);
+            rs.AddCopper(-10);
+            rs.AddIgnium(-10);
+        }
     }
     public void MinigSpeed2()
     {
-        stats.AddMiningSpeed(2);
+
+        if (rs.GetIridium() >= 10 && rs.GetCopper() >= 20 && rs.GetIgnium() >= 15)
+        {
+            st.AddMiningSpeed(2);
+            rs.AddIridium(-10);
+            rs.AddCopper(-20);
+            rs.AddIgnium(-15);
+        }
     }
     public void MinigSpeed3()
     {
-        stats.AddMiningSpeed(2);
+        if(rs.GetIridium() >= 25 && rs.GetSensium() >= 15 && rs.GetIgnium() >= 15)
+        {
+            st.AddMiningSpeed(2);
+            rs.AddIridium(-25);
+            rs.AddSensium(-15);
+            rs.AddIgnium(-15);
+        }
     }
     public void Damage1()
     {
-        stats.AddDamage(5);
+        if (rs.GetIron() >= 10 && rs.GetSensium() >= 15)
+        {
+            st.AddDamage(5);
+            rs.AddSensium(-15);
+            rs.AddIron(-10);
+        }
     }
     public void Damage2()
     {
-        stats.AddDamage(5);
+        if (rs.GetIron() >= 20 && rs.GetIridium() >= 10 && rs.GetSensium() >= 10)
+        {
+            st.AddDamage(5);
+            rs.AddIron(-20);
+            rs.AddIridium(-10);
+            rs.AddSensium(-10);
+        }
     }
     public void Damage3()
     {
-        stats.AddDamage(5);
+        if (rs.GetIron() >= 30 && rs.GetIridium() >= 20 && rs.GetSensium() >= 15)
+        {
+            st.AddDamage(5); 
+            rs.AddIron(-30);
+            rs.AddIridium(-20);
+            rs.AddSensium(-15);
+        }
     }
 
 
     public void FuelCappacity1()
     {
-        stats.AddFuelCapacity(10);
+        if (rs.GetIron() >= 20)
+        {
+            st.AddFuelCapacity(10);
+            rs.AddIron(-20);
+        }
     }
     public void FuelCappacity2()
     {
-        stats.AddFuelCapacity(10);
+        if (rs.GetIron() >= 25 && rs.GetCopper() >= 15)
+        {
+            st.AddFuelCapacity(10);
+            rs.AddIron(-25);
+            rs.AddCopper(-15);
+        }
     }
     public void FuelCappacity3()
     {
-        stats.AddFuelCapacity(10);
+        if (rs.GetIron() >= 35 && rs.GetIridium() >= 10)
+        {
+            st.AddFuelCapacity(10);
+            rs.AddIron(-35);
+            rs.AddIridium(-10);
+        }
     }
 
 
-    public void TelescopeRange()
+    public void TelescopeRange1()
     {
-        stats.AddTelescopeRange(1);
+        if (rs.GetIron() >= 10 && rs.GetSensium() >= 5)
+        {
+            st.AddTelescopeRange(1);
+            rs.AddIron(-10);
+            rs.AddSensium(-5);
+        }
+    }
+    public void TelescopeRange2()
+    {
+        if (rs.GetIron() >= 15 && rs.GetSensium() >= 15 && rs.GetCopper() >= 10)
+        {
+            st.AddTelescopeRange(1);
+            rs.AddIron(-30);
+            rs.AddSensium(-25);
+            rs.AddCopper(-10);
+        }
+    }
+    public void TelescopeRange3()
+    {
+        if (rs.GetIron() >= 20 && rs.GetSensium() >= 25 && rs.GetCopper() >= 10 && rs.GetIridium() >= 25)
+        {
+            st.AddTelescopeRange(1);
+            rs.AddIron(-30);
+            rs.AddSensium(-25);
+            rs.AddCopper(-10);
+            rs.AddIridium(-25);
+        }
+    }
+    public void TelescopeRange4()
+    {
+        if (rs.GetIron() >= 40 && rs.GetSensium() >= 35 && rs.GetCopper() >= 15 && rs.GetIridium() >= 40 && rs.GetUranium() >= 25)
+        {
+            st.AddTelescopeRange(1);
+            rs.AddIron(-40);
+            rs.AddSensium(-35);
+            rs.AddCopper(-15);
+            rs.AddIridium(-40);
+            rs.AddUranium(-25);
+        }
     }
     public void MaterialScanner()
     {
-        stats.SetMaterialScanner(true);
+        if (rs.GetIron() >= 10 && rs.GetSensium() >= 20 && rs.GetCopper() >= 10)
+        {
+            st.SetMaterialScanner(true);
+            rs.AddIron(-10);
+            rs.AddSensium(-20);
+            rs.AddCopper(-10);
+        }
     }
     public void ThreatAnalyzer()
     {
-        stats.SetThreatAnalyzer(true);
+        if (rs.GetIron() >= 10 && rs.GetSensium() >= 10 && rs.GetCopper() >= 10)
+        {
+            st.SetThreatAnalyzer(true);
+            rs.AddIron(-10);
+            rs.AddSensium(-10);
+            rs.AddCopper(-10);
+
+        }
     }
 
 
