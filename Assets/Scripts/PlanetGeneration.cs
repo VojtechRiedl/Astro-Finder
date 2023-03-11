@@ -8,11 +8,12 @@ public class PlanetGeneration : MonoBehaviour
     List<GameObject> planets = new List<GameObject>();
     [SerializeField]
     private Player player;
-
     private bool isGenerated = false;
-    void Start()
+
+
+    void Awake()
     {
-        SpawnPlanet();
+        player.ActualPlanet = SpawnPlanet();
     }
 
     void Update()
@@ -20,8 +21,8 @@ public class PlanetGeneration : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             if (!isGenerated)
-            {
-                SpawnPlanet();
+            { 
+                player.ActualPlanet =  SpawnPlanet();
             }
         }
 
@@ -38,7 +39,7 @@ public class PlanetGeneration : MonoBehaviour
     {
         var planet = GetRandomPlanet();
         isGenerated = true;
-        planet.GeneratePlanet();
+        planet = planet.GeneratePlanet();
         player.gameObject.transform.position = new Vector3(planet.SpawnPoint.gameObject.transform.position.x, planet.SpawnPoint.gameObject.transform.position.y, player.gameObject.transform.position.z);
         return planet;
         

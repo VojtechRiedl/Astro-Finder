@@ -10,7 +10,6 @@ public class Planet : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(spawnPoint.gameObject.transform.position);
     }
 
     // Update is called once per frame
@@ -20,8 +19,9 @@ public class Planet : MonoBehaviour
     }
 
 
-    public void GeneratePlanet()
+    public Planet GeneratePlanet()
     {
-        Instantiate(this, new Vector3(0, 0, 0), Quaternion.identity);
+        Instantiate(this, new Vector3(0, 100, 0), Quaternion.identity);
+        return this;
     }
 }
