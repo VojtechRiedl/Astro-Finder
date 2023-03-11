@@ -7,8 +7,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private InputManager InputManager;
-    [SerializeField]
-    private float speed = 15f;
+
     [SerializeField]
     private float jumpForce = 1f;
     [SerializeField]

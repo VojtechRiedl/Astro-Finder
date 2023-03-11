@@ -151,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 46915169}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.29, y: -0.38, z: 0.65}
-  m_LocalScale: {x: -0.19850548, y: 0.20942533, z: 1.6338359}
+  m_LocalScale: {x: 0.1985055, y: 0.20942533, z: 1.6338359}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1037224609}
@@ -283,6 +283,8 @@ MonoBehaviour:
   planets:
   - {fileID: 9140464089580498651, guid: ce9796ea880bc1648b8d1bd2802504af, type: 3}
   - {fileID: 8170249901502111879, guid: c729eee956261cf45a8badb48ee42eec, type: 3}
+  - {fileID: 3231907638144453981, guid: 487db569ee76ec641ac78e42c88bd234, type: 3}
+  PlanetGeneration: {fileID: 104846514}
 --- !u!1 &218879831
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,8 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputManager: {fileID: 669304737}
-  speed: 15
-  jumpForce: 1
+  Upgrades: {fileID: 0}
   playerRigid: {fileID: 1016190407}
 --- !u!4 &218879833
 Transform:
@@ -479,12 +480,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1016190404}
-  - component: {fileID: 1016190410}
   - component: {fileID: 1016190409}
-  - component: {fileID: 1016190408}
   - component: {fileID: 1016190407}
   - component: {fileID: 1016190406}
   - component: {fileID: 1016190405}
+  - component: {fileID: 1016190410}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -522,8 +522,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivityX: 1
   mouseSensitivityY: 1
-  walkSpeed: 3
-  jumpForce: 10
+  walkSpeed: 5
+  jumpForce: 50
   groundedMask:
     serializedVersion: 2
     m_Bits: 64
@@ -555,20 +555,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!136 &1016190408
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016190403}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1016190409
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -611,14 +597,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1016190410
-MeshFilter:
+--- !u!136 &1016190410
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016190403}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.3526044
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.18768099, z: 0}
 --- !u!1 &1037224608
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +691,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.05
   far clip plane: 1000
   field of view: 60
   orthographic: 0

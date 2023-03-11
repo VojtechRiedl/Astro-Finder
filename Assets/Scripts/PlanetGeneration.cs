@@ -11,6 +11,7 @@ public class PlanetGeneration : MonoBehaviour
     private PlanetManager planetManager;
     private bool isGenerated = false;
 
+    
     public bool IsGenerated { get => isGenerated; set => isGenerated = value; }
 
     void Start()
@@ -22,7 +23,7 @@ public class PlanetGeneration : MonoBehaviour
     {
         if (!isGenerated)
         {
-            //player.ActualPlanet = SpawnPlanet();
+            player.ActualPlanet = SpawnPlanet();
         }
     }
 
@@ -35,4 +36,5 @@ public class PlanetGeneration : MonoBehaviour
         return planet;
         
     }
+    
 }
