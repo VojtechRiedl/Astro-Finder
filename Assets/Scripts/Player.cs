@@ -5,11 +5,18 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
+<<<<<<< Updated upstream
     private InputManager InputManager;
     [SerializeField]
     private float speed = 15f;
     [SerializeField]
     private float jumpForce = 1f;
+=======
+    private GameObject Upgrades;
+
+
+    // Start is called before the first frame update
+>>>>>>> Stashed changes
 
     [SerializeField]
     private Rigidbody playerRigid;
@@ -28,6 +35,7 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
+<<<<<<< Updated upstream
         movement();
     }
 
@@ -67,5 +75,13 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         playerRigid.MovePosition(playerRigid.position + transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
+=======
+        if(Input.GetKeyDown("u"))
+        {
+            Upgrades.SetActive(!Upgrades.active);
+
+        }
+        
+>>>>>>> Stashed changes
     }
 }
