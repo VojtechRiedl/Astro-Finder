@@ -6,16 +6,28 @@ public class Planet : MonoBehaviour
 {
     [SerializeField] private GameObject spawnPoint;
 
+    private float timeToDestruction;
+
+    private bool readyToDestroy = false;
     public GameObject SpawnPoint { get => spawnPoint; }
+    public float TimeToDestruction { get => timeToDestruction; }
+    public bool ReadyToDestroy { get => readyToDestroy; }
 
     void Start()
     {
+        timeToDestruction = Random.Range(480f, 900f);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(timeToDestruction > 0)
+        {
+            timeToDestruction -= Time.deltaTime;
+        }
+        else
+        {
+            readyToDestroy = true;
+        }
     }
 
 
@@ -23,5 +35,10 @@ public class Planet : MonoBehaviour
     {
         Instantiate(this, new Vector3(0, 100, 0), Quaternion.identity);
         return this;
+    }
+
+    public void DestroyPlanet()
+    {
+        Destroy(this.gameObject);
     }
 }

@@ -10,6 +10,7 @@ public class PlanetGeneration : MonoBehaviour
     private Player player;
     private bool isGenerated = false;
 
+    public bool IsGenerated { get => isGenerated; set => isGenerated = value; }
 
     void Awake()
     {
@@ -18,18 +19,15 @@ public class PlanetGeneration : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (!isGenerated)
         {
-            if (!isGenerated)
-            { 
-                player.ActualPlanet =  SpawnPlanet();
-            }
+            player.ActualPlanet = SpawnPlanet();
         }
 
     }
 
 
-    private Planet GetRandomPlanet()
+    public Planet GetRandomPlanet()
     {
         return planets[UnityEngine.Random.Range(0, planets.Count)]
                 .GetComponent<Planet>();
