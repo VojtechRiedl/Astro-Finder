@@ -2569,9 +2569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf183e7e6545e049bc42d5ab9dec263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planets:
-  - {fileID: 9140464089580498651, guid: ce9796ea880bc1648b8d1bd2802504af, type: 3}
   player: {fileID: 966850246}
+  planetManager: {fileID: 0}
 --- !u!4 &172404359
 Transform:
   m_ObjectHideFlags: 0
@@ -2603,7 +2602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &182924413
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21456,7 +21455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -606, y: 231}
+  m_AnchoredPosition: {x: -557, y: 261}
   m_SizeDelta: {x: 75.539, y: 75.0786}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1463498515
@@ -25635,7 +25634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1817772534
 RectTransform:
   m_ObjectHideFlags: 0
