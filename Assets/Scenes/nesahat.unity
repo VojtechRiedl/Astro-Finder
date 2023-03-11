@@ -150,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46915169}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.29, y: -0.38, z: 0.65}
+  m_LocalPosition: {x: 0.517, y: -0.38, z: 0.658}
   m_LocalScale: {x: 0.1985055, y: 0.20942533, z: 1.6338359}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -167,7 +167,7 @@ BoxCollider:
   m_GameObject: {fileID: 46915169}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -284,6 +284,11 @@ MonoBehaviour:
   - {fileID: 9140464089580498651, guid: ce9796ea880bc1648b8d1bd2802504af, type: 3}
   - {fileID: 8170249901502111879, guid: c729eee956261cf45a8badb48ee42eec, type: 3}
   - {fileID: 3231907638144453981, guid: 487db569ee76ec641ac78e42c88bd234, type: 3}
+  - {fileID: 203968104259588083, guid: bc95cb8bd39b14444931ad6b5d1ba931, type: 3}
+  - {fileID: 8807164714499665547, guid: 0562ffaacaf68da4d93a8c0e59a072e9, type: 3}
+  - {fileID: 4736295188326894670, guid: 3f3ca5d69f13c2a48b675141e25a3fe4, type: 3}
+  - {fileID: 9073180783510235073, guid: 999393db653f87f4cb9fdb6ef1da8cde, type: 3}
+  - {fileID: 7443105861395234691, guid: 602ac436fcd6c56489206bb57b572675, type: 3}
   PlanetGeneration: {fileID: 104846514}
 --- !u!1 &218879831
 GameObject:
@@ -315,7 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputManager: {fileID: 669304737}
-  Upgrades: {fileID: 0}
+  upgrades: {fileID: 0}
   playerRigid: {fileID: 1016190407}
 --- !u!4 &218879833
 Transform:
@@ -500,8 +505,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016190403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0063054, y: 0.26145, z: 0.094319}
+  m_LocalScale: {x: 0.61109, y: 0.61109, z: 0.61109}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2108223537}
@@ -523,7 +528,7 @@ MonoBehaviour:
   mouseSensitivityX: 1
   mouseSensitivityY: 1
   walkSpeed: 5
-  jumpForce: 50
+  jumpForce: 40
   groundedMask:
     serializedVersion: 2
     m_Bits: 64
@@ -693,7 +698,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
