@@ -13,33 +13,37 @@ public class Planet : MonoBehaviour
     public float TimeToDestruction { get => timeToDestruction; }
     public bool ReadyToDestroy { get => readyToDestroy; }
 
-    void Start()
+    void Awake()
     {
-        timeToDestruction = Random.Range(20f, 30f);
+        timeToDestruction = Random.Range(480f, 900f);
     }
-
+    
     void Update()
     {
-        Debug.Log(timeToDestruction);
+        Debug.Log("Makam more" + name);
         if (timeToDestruction > 0)
         {
             timeToDestruction -= Time.deltaTime;
         }
         else
         {
+            
+            //Debug.Log("Ready to destroy 23");
             readyToDestroy = true;
+            DestroyPlanet();
         }
     }
-
 
     public Planet GeneratePlanet()
     {
         Instantiate(this, new Vector3(0, 100, 0), Quaternion.identity);
+        enabled = true;
         return this;
     }
 
     public void DestroyPlanet()
     {
-        Destroy(gameObject);
+        Debug.Log("Dead");
+        DestroyImmediate(gameObject,true);
     }
 }

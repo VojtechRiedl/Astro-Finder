@@ -1,20 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlanetManager : MonoBehaviour
 {
 
-    List<Planet> generatedPlanets = new List<Planet>();
+    HashSet<Planet> generatedPlanets = new HashSet<Planet>();
 
     [SerializeField]
     List<GameObject> planets = new List<GameObject>();
+    [SerializeField]
+    PlanetGeneration PlanetGeneration;
 
     void Awake()
     {
         GeneratePlanet();
     }
-
+    
     void Start()
     {
         
@@ -22,23 +25,34 @@ public class PlanetManager : MonoBehaviour
 
     void Update()
     {
+        
+        HashSet<Planet> excludedObjects = new HashSet<Planet>();
+
         foreach (var planet in generatedPlanets)
         {
-            Debug.Log(planet.ReadyToDestroy);
+            //planet.UpdatePlanet(); 
+            /*Debug.Log(planet.ReadyToDestroy);
             if (planet.ReadyToDestroy)
             {
+                Debug.Log(planet.name);
                 GeneratePlanet();
-                planet.DestroyPlanet();
-                generatedPlanets.Remove(planet);
-            }
+                //planet.DestroyPlanet();
+                planet.gameObject.SetActive(false);
+                excludedObjects.Add(planet);
+            }*/
+
         }
+        //Remove all elements in the second set from the first set.
+        generatedPlanets.ExceptWith(excludedObjects);
     }
 
     public void GeneratePlanet()
     {
         for (int i = 0; i < 3; i++)
         {
-            generatedPlanets.Add(GetRandomPlanet());
+            var planet = GetRandomPlanet();
+            
+            generatedPlanets.Add(planet);
         }
         
     }
@@ -49,7 +63,14 @@ public class PlanetManager : MonoBehaviour
     }
     public Planet spawnRandomPlanet()
     {
-        return generatedPlanets[UnityEngine.Random.Range(0, generatedPlanets.Count)];
+        return generatedPlanets.ElementAt(UnityEngine.Random.Range(0, generatedPlanets.Count));
     }
-    
+    public void PlanetDestroyed(Planet p)
+    {
+        generatedPlanets.Remove(p);
+        PlanetGeneration.IsGenerated = false;
+
+
+    }
+
 }
