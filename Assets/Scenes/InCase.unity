@@ -2601,7 +2601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &182924413
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12936,7 +12936,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b458e40504488a24ab94ca54f0b036bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Upgrades: {fileID: 182924412}
+  InputManager: {fileID: 0}
+  speed: 15
+  jumpForce: 1
+  playerRigid: {fileID: 548659806}
 --- !u!4 &966850247
 Transform:
   m_ObjectHideFlags: 0
@@ -12968,6 +12971,7 @@ MonoBehaviour:
   cam: {fileID: 1253157283}
   interactionRange: 5
   inRange: 0
+  interactionUI: {fileID: 0}
   interactionText: {fileID: 653823071}
 --- !u!1 &997407529
 GameObject:
@@ -15509,7 +15513,6 @@ MonoBehaviour:
   distance: 0
   reductionSpeed: 0.02
   minScale: 0.02
-  Res: {fileID: 0}
 --- !u!65 &1197121268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21581,7 +21584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1580925173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22513,7 +22516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1719458702
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26512,7 +26515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Requires:'
+  m_text: 'Requires: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
