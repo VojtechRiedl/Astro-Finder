@@ -15,12 +15,13 @@ public class Planet : MonoBehaviour
 
     void Start()
     {
-        timeToDestruction = Random.Range(480f, 900f);
+        timeToDestruction = Random.Range(20f, 30f);
     }
 
     void Update()
     {
-        if(timeToDestruction > 0)
+        Debug.Log(timeToDestruction);
+        if (timeToDestruction > 0)
         {
             timeToDestruction -= Time.deltaTime;
         }
@@ -39,6 +40,6 @@ public class Planet : MonoBehaviour
 
     public void DestroyPlanet()
     {
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }

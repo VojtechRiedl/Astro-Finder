@@ -8,22 +8,28 @@ public class PlanetManager : MonoBehaviour
     List<Planet> generatedPlanets = new List<Planet>();
 
     [SerializeField]
-    PlanetGeneration planetGeneration;
-    // Start is called before the first frame update
+    List<GameObject> planets = new List<GameObject>();
+
+    void Awake()
+    {
+        GeneratePlanet();
+    }
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         foreach (var planet in generatedPlanets)
         {
+            Debug.Log(planet.ReadyToDestroy);
             if (planet.ReadyToDestroy)
             {
                 GeneratePlanet();
                 planet.DestroyPlanet();
+                generatedPlanets.Remove(planet);
             }
         }
     }
@@ -32,8 +38,18 @@ public class PlanetManager : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            generatedPlanets.Add(planetGeneration.GetRandomPlanet());
+            generatedPlanets.Add(GetRandomPlanet());
         }
         
     }
+    public Planet GetRandomPlanet()
+    {
+        return planets[UnityEngine.Random.Range(0, planets.Count)]
+                .GetComponent<Planet>();
+    }
+    public Planet spawnRandomPlanet()
+    {
+        return generatedPlanets[UnityEngine.Random.Range(0, generatedPlanets.Count)];
+    }
+    
 }
