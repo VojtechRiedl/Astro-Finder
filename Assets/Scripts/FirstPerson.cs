@@ -5,14 +5,12 @@ using UnityEngine;
 public class FirstPerson : MonoBehaviour
 {
 
-    // public vars
     public float mouseSensitivityX = 1;
     public float mouseSensitivityY = 1;
     public float walkSpeed = 6;
     public float jumpForce = 220;
     public LayerMask groundedMask;
 
-    // System vars
     bool grounded;
     Vector3 moveAmount;
     Vector3 smoothMoveVelocity;
