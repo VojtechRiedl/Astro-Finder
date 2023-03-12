@@ -217,7 +217,7 @@ RectTransform:
   m_Children:
   - {fileID: 1762401060}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5176,7 +5176,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1349580217
 GameObject:
@@ -10210,8 +10210,63 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1706265283
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/RetroCameraEffect
+  m_Shader: {fileID: 4800000, guid: 2cfdcae76c757405786f1219a383da6e, type: 3}
+  m_ValidKeywords:
+  - BOTTOM_STRETCH_ON
+  - CHROMATIC_ON
+  - DISPLACEMENT_ON
+  - NOISE_BOTTOM_ON
+  - NOISE_ON
+  - RADIAL_DISTORTION_ON
+  - SCANLINES_ON
+  - VIGNETTE_ON
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondaryTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ChromaticAberration: 10
+    - _DisplacementAmplitude: 0.001
+    - _DisplacementFrequency: 100
+    - _DisplacementSpeed: 1
+    - _NoiseBottomHeight: 0.04
+    - _NoiseBottomIntensity: 1
+    - _OffsetNoiseX: 0.6187168
+    - _OffsetNoiseY: 0.13281706
+    - _StaticIntensity: 0.5
+    - _UseChromaticAberration: 1
+    - _UseDisplacement: 1
+    - _UseStaticNoise: 1
+    - _UseVignette: 0
+    - _Vignette: 0.1
+    m_Colors:
+    - _OffsetPos: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1757412129
 GameObject:
   m_ObjectHideFlags: 0
@@ -10223,6 +10278,7 @@ GameObject:
   - component: {fileID: 1757412132}
   - component: {fileID: 1757412131}
   - component: {fileID: 1757412130}
+  - component: {fileID: 1757412133}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10296,6 +10352,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 6.897, y: 13.196, z: -0.907}
+--- !u!114 &1757412133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757412129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2e0eef68e9754b2a8a28e5afbe009a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useStaticNoise: 1
+  noiseTexture: {fileID: 0}
+  staticIntensity: 0.5
+  randomGlitches: 1
+  glitchIntensity: 1
+  glitchFrequency: 10
+  useDisplacementWaves: 1
+  displacementAmplitude: 1
+  displacementFrequency: 100
+  displacementSpeed: 1
+  useChromaticAberration: 1
+  chromaticAberration: 10
+  useVignette: 1
+  vignette: 0.1
+  useBottomNoise: 1
+  bottomHeight: 0.04
+  bottomIntensity: 1
+  useBottomStretch: 1
+  useRadialDistortion: 1
+  radialIntensity: 20
+  radialCurvature: 4
+  gammaScale: 1
+  useScanlines: 1
+  scanlineSize: 512
+  scanlineIntensity: 0.5
+  _material: {fileID: 1706265283}
 --- !u!1 &1762401059
 GameObject:
   m_ObjectHideFlags: 0
