@@ -243,3 +243,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 298798835286109949, guid: d968c5049d6732f4dbd13c1ffd596e9e, type: 3}
   m_PrefabInstance: {fileID: 7734679662897765371}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8225709504451374141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1833120191955171270, guid: d968c5049d6732f4dbd13c1ffd596e9e, type: 3}
+  m_PrefabInstance: {fileID: 7734679662897765371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2871321042385242031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8225709504451374141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77254d6019018394b97f16f70895d327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlanetSelection: {fileID: 0}
+  numOfPlanets: 3
+  lastNumOfPlanets: 0
+  isActive: 0
+  itemInteraction: {fileID: 0}

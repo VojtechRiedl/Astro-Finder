@@ -120,6 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 3012831521206490529}
+  planetName: 
+  planetType: 
 --- !u!114 &6044550259112658813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1065,6 +1067,26 @@ PrefabInstance:
     - target: {fileID: 1111926599008597063, guid: d968c5049d6732f4dbd13c1ffd596e9e, type: 3}
       propertyPath: m_Name
       value: Spaceship
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648552046173831139, guid: d968c5049d6732f4dbd13c1ffd596e9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.74168324
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648552046173831139, guid: d968c5049d6732f4dbd13c1ffd596e9e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.6707503
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648552046173831139, guid: d968c5049d6732f4dbd13c1ffd596e9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 84.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9020014414556117917, guid: d968c5049d6732f4dbd13c1ffd596e9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9020014414556117917, guid: d968c5049d6732f4dbd13c1ffd596e9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d968c5049d6732f4dbd13c1ffd596e9e, type: 3}

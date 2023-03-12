@@ -6,15 +6,12 @@ public class telescope : MonoBehaviour, IInteractable
 {
 
     [SerializeField]
-    private GameObject PlanetSelection;
-    [SerializeField]
-    private int numOfPlanets = 3;
-    [SerializeField]
-    private int lastNumOfPlanets;
-    [SerializeField]
-    private bool isActive = false;
-    [SerializeField]
-    private ItemInteraction itemInteraction;
+    private GameObject planetSelection;
+    private void Start()
+    {
+        planetSelection = GameObject.FindWithTag("planetSelection");
+        planetSelection.SetActive(false);
+    }
     public string GetInteractText()
     {
         return "box";
@@ -27,26 +24,8 @@ public class telescope : MonoBehaviour, IInteractable
 
     public void Interact(Transform interactorTransform)
     {
-        if (!isActive)
-        {
-            PlanetSelection.SetActive(true);
-            isActive = true;
-        }
-        else
-        {
-            PlanetSelection.SetActive(false);
-            isActive = false;
-        }
-        
-        numOfPlanets = lastNumOfPlanets;
+            planetSelection.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
     }
-
-    public void Update()
-    {
-        if(!itemInteraction.inRange)
-        {
-            PlanetSelection.SetActive(false);
-        }
-    }
-
 }
