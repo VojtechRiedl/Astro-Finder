@@ -8,7 +8,7 @@ public class telescope : MonoBehaviour, IInteractable
 
     [SerializeField]
     private GameObject planetSelection;
-    private void Start()
+    private void Awake()
     {
         planetSelection = GameObject.FindWithTag("planetSelection");
         planetSelection.SetActive(false);

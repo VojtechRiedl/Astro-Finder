@@ -11,6 +11,7 @@ TagManager:
   - statsText
   - planetName
   - planetDesc
+  - PlanetGeneration
   layers:
   - Default
   - TransparentFX

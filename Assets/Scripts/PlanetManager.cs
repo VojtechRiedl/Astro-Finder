@@ -12,7 +12,11 @@ public class PlanetManager : MonoBehaviour
     List<GameObject> planets = new List<GameObject>();
     [SerializeField]
     PlanetGeneration PlanetGeneration;
-    
+    [SerializeField]
+    buttons buttons;
+
+    public GameObject planetPrefab;
+
 
     void Awake()
     {
@@ -52,7 +56,7 @@ public class PlanetManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             var planet = GetRandomPlanet();
-            
+            buttons.MakeButtonPlanet(planet);
             generatedPlanets.Add(planet);
         }
         
@@ -71,6 +75,10 @@ public class PlanetManager : MonoBehaviour
     {
         generatedPlanets.Remove(p);
         PlanetGeneration.IsGenerated = false;
+    }
+
+    public void destroyFirst() {
+        Destroy(planetPrefab);
     }
 
 }

@@ -30,7 +30,7 @@ public class ItemInteraction : MonoBehaviour
            // interact.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.E ) && inRange)
+        if (Input.GetKeyDown(KeyCode.E) && inRange)
         {
             if( hit.transform.GetComponent<IInteractable>() != null )
             {

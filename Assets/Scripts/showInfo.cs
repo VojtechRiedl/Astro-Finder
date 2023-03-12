@@ -28,20 +28,25 @@ public class showInfo : MonoBehaviour
     [SerializeField]
     private bool markedToTeleport = false;
 
+    [SerializeField]
+    PlanetGeneration planetGeneration;
+
     private void Start()
     {
         planetName = GameObject.FindWithTag("planetName").GetComponent<TextMeshProUGUI>();
         planetDesc = GameObject.FindWithTag("planetDesc").GetComponent<TextMeshProUGUI>();
         statsText = GameObject.FindWithTag("statsText").GetComponent<TextMeshProUGUI>();
+        planetGeneration = GameObject.FindWithTag("PlanetGeneration").GetComponent<PlanetGeneration>();
     }
 
     public void OnClickShow()
     {
-
         Debug.Log("ao");
-        planetName.text = "Toxic";
-        planetDesc.text = "Toxicka planeta. Poprvé nalezena roku 4025";
+        planetName.text = realPlanet.name;
+        planetDesc.text = "planeta. Poprvé nalezena roku 4025";
+        
         statsText.text = "Requires: " + requires + "\nContains: " + contains + "\nThreat level: " + threatlevel + "\nCycle: " + cycle;
+        planetGeneration.setPlanet(realPlanet);
     }
 
     public Planet GetRealPlanet()

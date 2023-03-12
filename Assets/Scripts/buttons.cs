@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlanetyButtons : MonoBehaviour
+
+public class buttons : MonoBehaviour
 {
     [SerializeField]
     private PlanetManager plman;
     [SerializeField]
-    private Text planetNameText;
+    private TextMeshProUGUI planetNameText;
 
     [SerializeField] private Sprite greenPlanet;
     [SerializeField] private Sprite toxicPlanet;
@@ -27,9 +28,10 @@ public class PlanetyButtons : MonoBehaviour
     {
 
         Debug.Log("ButtonMade");
-        float buttonX = Random.Range(-650, 650);
-        float buttonY = Random.Range(220, 400);
-        Vector3 buttonPos = new Vector3(buttonX, buttonY, 0);
+        float buttonX = Random.Range(-600,600);
+        float buttonY = Random.Range(-200,200);
+        Debug.Log(buttonX + " " + buttonY);
+        Vector3 buttonPos = new Vector3(buttonX + 742, buttonY + 761, 0);
 
         Button planetButton = Instantiate(emptyButton, buttonPos, Quaternion.identity, buttonsParent.transform);
         planetButton.onClick.AddListener(delegate () { ButtonClicked(); });
@@ -62,7 +64,7 @@ public class PlanetyButtons : MonoBehaviour
                 planetButton.GetComponent<Image>().sprite = defaultPlanet;
                 break;
         }
-
+    
         void ButtonClicked()
         {
             Planet pl = planetButton.GetComponent<showInfo>().GetRealPlanet();
@@ -81,20 +83,20 @@ public class PlanetyButtons : MonoBehaviour
             planetButton.GetComponent<showInfo>().SetMarkedToTeleport(true);
 
         }
-        
+
 
     }
+    
     public void GoButton()
     {
-        foreach (Transform child in buttonsParent.transform)
+        /*foreach (Transform child in buttonsParent.transform)
         {
             showInfo shin = child.GetComponent<showInfo>();
 
             if (shin != null && shin == true)
             {
                 Debug.Log("teleporting to " + shin.GetRealPlanet());
-
-                return;
+                // teleportation HERE
 
 
 
@@ -103,6 +105,9 @@ public class PlanetyButtons : MonoBehaviour
 
 
             }
-        }
+        }*/
+
+
+        
     }
 }

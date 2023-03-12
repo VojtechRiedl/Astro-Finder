@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static TreeEditor.TreeEditorHelper;
+using UnityEngine.SceneManagement;
 
 public class Planet : MonoBehaviour
 {
     [SerializeField] private GameObject spawnPoint;
     [SerializeField] private string planetName;
     [SerializeField]
-    private planettype type;
-    enum planettype
+    private planettype planetType;
+    public enum planettype
     {
         green, toxic, magma, winter, iradiated, storm, earthquake
     }
@@ -20,11 +20,11 @@ public class Planet : MonoBehaviour
     public GameObject SpawnPoint { get => spawnPoint; }
     public float TimeToDestruction { get => timeToDestruction; }
     public bool ReadyToDestroy { get => readyToDestroy; }
-    
+    public planettype Type { get => planetType; }
 
     void Awake()
     {
-        timeToDestruction = Random.Range(40f, 52f);//Random.Range(480f, 900f); 
+        timeToDestruction = Random.Range(400f, 800);//Random.Range(480f, 900f); 
     }
     
     void Update()
@@ -39,6 +39,7 @@ public class Planet : MonoBehaviour
             //Debug.Log("Ready to destroy 23");
             readyToDestroy = true;
             DestroyPlanet();
+            SceneManager.LoadScene("EndScene");
         }
     }
 
@@ -52,7 +53,7 @@ public class Planet : MonoBehaviour
     public void DestroyPlanet()
     {
         Debug.Log("Dead");
-        DestroyImmediate(gameObject,true);
+        Destroy(gameObject.GetComponentInParent<Planet>());
     }
 
     public string GetPlanetName()
@@ -60,9 +61,9 @@ public class Planet : MonoBehaviour
         return planetName;
     }
 
-    public string GetPlanetType()
+    /*public string GetPlanetType()
     {
         string pltp = type.ToString();
         return pltp;
-    }
+    }*/
 }

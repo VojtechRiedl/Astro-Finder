@@ -8,7 +8,7 @@ public class GravityBody : MonoBehaviour
     GravityAttractor planet;
     Rigidbody rigidbody;
 
-    void Start()
+    void Awake()
     {
         planet = GameObject.FindGameObjectWithTag("Planet").GetComponent<GravityAttractor>();
         rigidbody = GetComponent<Rigidbody>();
@@ -17,8 +17,18 @@ public class GravityBody : MonoBehaviour
         rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
+
+    public void getPlanet()
+    {
+        this.planet = GameObject.FindGameObjectWithTag("Planet").GetComponent<GravityAttractor>();
+    }
     void FixedUpdate()
     {
+        if(planet == null)
+        {
+            planet = GameObject.FindGameObjectWithTag("Planet").GetComponent<GravityAttractor>();
+
+        }
         planet.Attract(rigidbody);
     }
 }
