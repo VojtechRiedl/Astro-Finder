@@ -5,13 +5,24 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-        [SerializeField]
+
+    public static Player instance { get; private set; }
+    [SerializeField]
     private GameObject planetSelection;
     [SerializeField]
     private InputManager InputManager;
     [SerializeField]
+    private Animator animator;
+    [SerializeField]
     private GameObject upgrades;
+    [SerializeField]
+    private Stats stats;
+    public Resources resources;
 
+    [SerializeField]
+    private GameObject firstPlanet;
+
+    
     bool active = false;
 
     // Start is called before the first frame update
@@ -24,14 +35,20 @@ public class Player : MonoBehaviour
     public Planet ActualPlanet { get => actualPlanet; set => actualPlanet = value; }
     public Rigidbody PlayerRigid { get => playerRigid; }
 
-    private Vector3 moveDirection;
-
     void Start()
     {
+        actualPlanet = firstPlanet.GetComponent<Planet>();
     }
     void Update()
     {
-       
+        if(actualPlanet.TimeToDestruction < 20 && !animator.enabled)
+        {
+            animator.enabled = true;
+        }
+        else if (actualPlanet.TimeToDestruction > 20 && animator.enabled)
+        {
+            animator.enabled = false;
+        }
     }
 
     
