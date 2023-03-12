@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject planetSelection;
     [SerializeField]
+    private InputManager InputManager;
+    [SerializeField]
     private Animator animator;
     [SerializeField]
     private GameObject upgrades;
