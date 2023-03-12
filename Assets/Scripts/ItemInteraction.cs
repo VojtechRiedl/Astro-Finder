@@ -15,8 +15,6 @@ public class ItemInteraction : MonoBehaviour
     public GameObject interactionUI;
     public Text interactionText;
 
-    [SerializeField]
-    private GameObject interact;
 
     void Update()
     {
