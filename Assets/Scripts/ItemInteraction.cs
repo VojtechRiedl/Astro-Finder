@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,11 +15,22 @@ public class ItemInteraction : MonoBehaviour
     public GameObject interactionUI;
     public Text interactionText;
 
+    [SerializeField]
+    private GameObject interact;
+
     void Update()
     {
         RaycastHit hit;
         inRange = Physics.Raycast(cam.position, cam.TransformDirection(Vector3.forward), out hit, interactionRange);
 
+        if(inRange)
+        {
+            interact.SetActive(true);
+        }
+        else
+        {
+            interact.SetActive(false);
+        }
 
         if (Input.GetKeyDown(KeyCode.E ) && inRange)
         {
@@ -28,7 +40,7 @@ public class ItemInteraction : MonoBehaviour
             }
         }
 
-        UiUpdate(hit);
+        //UiUpdate(hit);
     }
 
      void UiUpdate(RaycastHit hit)
