@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -312,10 +312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: (Almost) always warm with grandmas sweater
-  potrebuje: 
 --- !u!114 &28726234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,10 +460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Faster mining!
-  potrebuje: 
 --- !u!114 &49924558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,6 +1036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 966850246}
   planetManager: {fileID: 0}
+  planetyButtons: {fileID: 0}
 --- !u!4 &172404359
 Transform:
   m_ObjectHideFlags: 0
@@ -1075,7 +1068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &182924413
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1302,10 +1295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: 4
-  potrebuje: 
 --- !u!114 &229194595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3104,10 +3093,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: 5
-  potrebuje: 
 --- !u!114 &422279954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3256,10 +3241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Wow-sized fuel tank
-  potrebuje: 
 --- !u!114 &423733330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3543,10 +3524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Shows you what recourses you can find on planets(planet travel selection)
-  potrebuje: 
 --- !u!114 &437275239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4002,10 +3979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: 5
-  potrebuje: 
 --- !u!114 &497639858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4693,10 +4666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: 4
-  potrebuje: 
 --- !u!114 &539948166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4962,10 +4931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Better cold resistance
-  potrebuje: 
 --- !u!114 &553151711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5829,10 +5794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Absolutely best telescope range
-  potrebuje: 
 --- !u!114 &637819967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6018,10 +5979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Ultrasonic speed
-  potrebuje: 
 --- !u!114 &656740645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6561,10 +6518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: 6
-  potrebuje: 
 --- !u!114 &774654421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7881,10 +7834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Bigger fuel tank yay!
-  potrebuje: 
 --- !u!114 &869411803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8258,10 +8207,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b458e40504488a24ab94ca54f0b036bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planetSelection: {fileID: 0}
   InputManager: {fileID: 0}
-  speed: 15
-  jumpForce: 1
+  animator: {fileID: 0}
   upgrades: {fileID: 182924412}
+  firstPlanet: {fileID: 0}
   playerRigid: {fileID: 548659806}
 --- !u!4 &966850247
 Transform:
@@ -8965,10 +8915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Even better telescope range
-  potrebuje: 
 --- !u!114 &1089198839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9117,10 +9063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Destroy-everything-inator
-  potrebuje: 
 --- !u!114 &1092673474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10092,6 +10034,8 @@ MonoBehaviour:
   distance: 0
   reductionSpeed: 0.02
   minScale: 0.02
+  mining: {fileID: 0}
+  collect: {fileID: 0}
 --- !u!65 &1197121268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10476,10 +10420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: 6
-  potrebuje: 
 --- !u!114 &1232183641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11118,10 +11058,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Be a healthier fella
-  potrebuje: 
 --- !u!114 &1295590940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11798,11 +11734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77254d6019018394b97f16f70895d327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlanetSelection: {fileID: 1817772533}
-  numOfPlanets: 0
-  lastNumOfPlanets: 0
-  isActive: 0
-  itemInteraction: {fileID: 966850248}
+  planetSelection: {fileID: 0}
 --- !u!1 &1360543831
 GameObject:
   m_ObjectHideFlags: 0
@@ -12263,10 +12195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Nerf miner (speediest  mining speed)
-  potrebuje: 
 --- !u!114 &1407447895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12415,10 +12343,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Shows you threats on planet travel selection
-  potrebuje: 
 --- !u!114 &1419748600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12567,10 +12491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: What? Even better telescope range??
-  potrebuje: 
 --- !u!114 &1423459007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12854,10 +12774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Better radiation resistance
-  potrebuje: 
 --- !u!114 &1444109187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13141,13 +13057,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetName: {fileID: 1195311011}
   planetDesc: {fileID: 1370197462}
-  Stats: {fileID: 855622491}
+  statsText: {fileID: 0}
   requires: idk
   contains: sdasda
   threatlevel: hodne
   cycle: i forgor
-  nahledak: {fileID: 21300000, guid: 9cae864b40b2ecd469efcf444de8eb3e, type: 3}
   image: {fileID: 1887075589}
+  realPlanet: {fileID: 0}
+  markedToTeleport: 0
 --- !u!114 &1463498516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13563,7 +13480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62de06e2af7699640a1dd1ef23578c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  i: 0
 --- !u!1 &1515113858
 GameObject:
   m_ObjectHideFlags: 0
@@ -14232,10 +14148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Best radiation resistance!
-  potrebuje: 
 --- !u!114 &1575302652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14384,10 +14296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Fast as duck boi
-  potrebuje: 
 --- !u!114 &1576378476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14754,10 +14662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Health :)
-  potrebuje: 
 --- !u!114 &1656937376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15754,10 +15658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Become God-like creature! (health)
-  potrebuje: 
 --- !u!114 &1771608317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17644,10 +17544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Better telescope range
-  potrebuje: idk
 --- !u!114 &2025183778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18646,10 +18542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Faster movement
-  potrebuje: 
 --- !u!114 &2101732099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18798,10 +18690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6ae6469ea70d48817d6a5b66ca891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dela_Text: {fileID: 51686286}
-  potrebuje_Text: {fileID: 401287273}
-  dela: Even bigger fuel tank? :O
-  potrebuje: 
 --- !u!114 &2130031082
 MonoBehaviour:
   m_ObjectHideFlags: 0

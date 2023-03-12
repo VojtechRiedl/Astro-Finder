@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     void Start() {
         resources = GetComponent<Resources>();
         //actualPlanet = firstPlanet.GetComponent<Planet>();
+        planetSelection.SetActive(false);
     }
     void Update()
     {

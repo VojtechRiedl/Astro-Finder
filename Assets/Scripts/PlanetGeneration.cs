@@ -30,16 +30,6 @@ public class PlanetGeneration : MonoBehaviour
             player.ActualPlanet = SpawnPlanet();
         }
     }
-    private void FixedUpdate()
-    {
-        if(Input.GetKeyDown(KeyCode.U))
-        {
-            gameObject.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Confined;
-            Time.timeScale = 0;
-        }
-    }
 
     private Planet SpawnPlanet()
     {

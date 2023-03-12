@@ -8,6 +8,9 @@ TagManager:
   - Planet
   - player
   - planetSelection
+  - statsText
+  - planetName
+  - planetDesc
   layers:
   - Default
   - TransparentFX
