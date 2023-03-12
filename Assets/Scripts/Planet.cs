@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TreeEditor.TreeEditorHelper;
 
 public class Planet : MonoBehaviour
 {
     [SerializeField] private GameObject spawnPoint;
     [SerializeField] private string planetName;
-    [SerializeField] private string planetType; // tak co už
+    [SerializeField]
+    private planettype type;
+    enum planettype
+    {
+        green, toxic, magma, winter, iradiated, storm, earthquake
+    }
 
     private float timeToDestruction;
 
@@ -56,6 +62,7 @@ public class Planet : MonoBehaviour
 
     public string GetPlanetType()
     {
-        return planetType;
+        string pltp = type.ToString();
+        return pltp;
     }
 }

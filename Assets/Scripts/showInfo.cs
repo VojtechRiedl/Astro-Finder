@@ -12,7 +12,7 @@ public class showInfo : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI planetDesc;
     [SerializeField]
-    private TextMeshProUGUI Stats;
+    private TextMeshProUGUI statsText;
     [SerializeField]
     private string requires;
     [SerializeField]
@@ -22,24 +22,17 @@ public class showInfo : MonoBehaviour
     [SerializeField]
     private string cycle;
     [SerializeField]
-    private Sprite nahledak;
-    [SerializeField]
     private Image image;
+    [SerializeField]
+    private Planet realPlanet;
+    [SerializeField]
+    private bool markedToTeleport = false;
 
-
-
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        planetName = GameObject.FindWithTag("planetName").GetComponent<TextMeshProUGUI>();
+        planetDesc = GameObject.FindWithTag("planetDesc").GetComponent<TextMeshProUGUI>();
+        statsText = GameObject.FindWithTag("statsText").GetComponent<TextMeshProUGUI>();
     }
 
     public void OnClickShow()
@@ -48,7 +41,23 @@ public class showInfo : MonoBehaviour
         Debug.Log("ao");
         planetName.text = "Toxic";
         planetDesc.text = "Toxicka planeta. Poprvé nalezena roku 4025";
-        Stats.text = "Requires: " + requires + "\nContains: " + contains + "\nThreat level: " + threatlevel + "\nCycle: " + cycle;
-        image.sprite = nahledak;
+        statsText.text = "Requires: " + requires + "\nContains: " + contains + "\nThreat level: " + threatlevel + "\nCycle: " + cycle;
+    }
+
+    public Planet GetRealPlanet()
+    {
+        return realPlanet;
+    }
+    public void SetRealPlanet(Planet pl)
+    {
+        realPlanet = pl;
+    }
+    public bool GetMarkedToTeleport()
+    {
+        return markedToTeleport;
+    }
+    public void SetMarkedToTeleport(bool value)
+    {
+        markedToTeleport = value;
     }
 }
