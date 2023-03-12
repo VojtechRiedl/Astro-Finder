@@ -19,6 +19,8 @@ public class Weapon : MonoBehaviour
     private float cooldown = 1;
     [SerializeField]
     private AudioSource mining;
+    [SerializeField]
+    private AudioSource collect;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,7 @@ public class Weapon : MonoBehaviour
                 else
                 {
                     Res.GetComponent<Ore>().GetMined();
+                    collect.Play();
                     Destroy(Res);
                 }
 
