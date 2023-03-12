@@ -527,6 +527,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 19644643a6d6d8049b087870269514e5, type: 3}
   m_PrefabInstance: {fileID: 1290939796}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &628690113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628690104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da3baddb16e57c499122a8e2147fb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: -9.8
 --- !u!1 &662046699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,8 +1516,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320463037}
-  - component: {fileID: 1320463036}
-  - component: {fileID: 1320463038}
   m_Layer: 0
   m_Name: StartPlanet
   m_TagString: Untagged
@@ -1512,21 +1523,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1320463036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320463035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b47dbc84ccc52b429e33e8046e4098b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 379329891}
-  planetName: test
-  planetType: 
 --- !u!4 &1320463037
 Transform:
   m_ObjectHideFlags: 0
@@ -1543,19 +1539,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1320463038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320463035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7da3baddb16e57c499122a8e2147fb4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravity: -9.8
 --- !u!1 &1420914976
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,8 +2010,6 @@ MonoBehaviour:
   animator: {fileID: 1131375877}
   upgrades: {fileID: 0}
   firstPlanet: {fileID: 1320463035}
-  resources: {fileID: 0}
-  stats: {fileID: 0}
   playerRigid: {fileID: 1216396880}
 --- !u!4 &1958770118
 Transform:
