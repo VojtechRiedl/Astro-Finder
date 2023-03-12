@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4682299540030208167}
   m_Layer: 0
   m_Name: UraniumOre1
-  m_TagString: Untagged
+  m_TagString: res
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,8 +63,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3986188387995331715, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
   - {fileID: 2100000, guid: fefdadb0dad688f438720a4021de4f6c, type: 2}
+  - {fileID: 3986188387995331715, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

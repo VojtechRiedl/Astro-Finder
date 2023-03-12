@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7364645745419423529}
   m_Layer: 0
   m_Name: SensiumOre1
-  m_TagString: Untagged
+  m_TagString: res
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,8 +63,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3986188387995331715, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
   - {fileID: 2100000, guid: f3420ec58a798174c87c76d094afc559, type: 2}
+  - {fileID: 3986188387995331715, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
