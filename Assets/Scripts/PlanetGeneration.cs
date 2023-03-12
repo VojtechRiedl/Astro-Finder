@@ -48,10 +48,6 @@ public class PlanetGeneration : MonoBehaviour
         planet = planet.GeneratePlanet();
         player.gameObject.transform.position = new Vector3(planet.SpawnPoint.gameObject.transform.position.x, planet.SpawnPoint.gameObject.transform.position.y, player.gameObject.transform.position.z);
 
-        if (planetyButtons != null) // button planety v telescopu
-        {
-            planetyButtons.MakeButtonPlanet(planet);
-        }
         return planet;
         
     }
