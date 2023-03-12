@@ -46,10 +46,12 @@ public class Uprgrades : MonoBehaviour
     }
     public void Speed1()
     {
-        if (rs.GetIron() >= 10 && rs.GetSensium() >= 10)
-        st.AddSpeed(10);
-        rs.AddIron(-10);
-        rs.AddSensium(-10);
+        if (rs.GetIron() >= 10 && rs.GetSensium() >= 10) 
+        {
+            st.AddSpeed(10);
+            rs.AddIron(-10);
+            rs.AddSensium(-10);   
+        }
     }
     public void Speed2()
     {
@@ -274,6 +276,4 @@ public class Uprgrades : MonoBehaviour
 
         }
     }
-
-
 }
