@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    public static Player instance { get; } = new Player();
+    public static Player instance { get; private set; }
     [SerializeField]
     private GameObject planetSelection;
     [SerializeField]
@@ -18,9 +19,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject firstPlanet;
 
-    
-    public Resources resources;
-    public Stats stats;
+
+    public Resources resources { get; private set; }
+    public Stats stats { get; }
     bool active = false;
 
     // Start is called before the first frame update
@@ -33,19 +34,28 @@ public class Player : MonoBehaviour
     public Planet ActualPlanet { get => actualPlanet; set => actualPlanet = value; }
     public Rigidbody PlayerRigid { get => playerRigid; }
 
-    void Start()
-    {
-        actualPlanet = firstPlanet.GetComponent<Planet>();
+    private void Awake() {
+        instance = this;
+    }
+
+    void Start() {
+        resources = GetComponent<Resources>();
+        //actualPlanet = firstPlanet.GetComponent<Planet>();
     }
     void Update()
     {
-        if(actualPlanet.TimeToDestruction < 20 && !animator.enabled)
-        {
-            animator.enabled = true;
+        try {
+            if(actualPlanet.TimeToDestruction < 20 && !animator.enabled)
+            {
+                animator.enabled = true;
+            }
+            else if (actualPlanet.TimeToDestruction > 20 && animator.enabled)
+            {
+                animator.enabled = false;
+            }
         }
-        else if (actualPlanet.TimeToDestruction > 20 && animator.enabled)
-        {
-            animator.enabled = false;
+        catch (Exception e) {
+            //ignore
         }
     }
 
