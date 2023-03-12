@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
-{
-        [SerializeField]
+public class Player : MonoBehaviour {
+    public static Player instance { get; } = new Player();
+    [SerializeField]
     private GameObject planetSelection;
     [SerializeField]
     private InputManager InputManager;
     [SerializeField]
     private GameObject upgrades;
-
+    public Resources resources;
+    public Stats stats;
     bool active = false;
 
     // Start is called before the first frame update
-
+    
     [SerializeField]
     private Rigidbody playerRigid;
 
@@ -62,6 +63,6 @@ public class Player : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
 
-
+        
     }
 }
