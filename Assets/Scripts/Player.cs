@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    public class Player : MonoBehaviour {
     public static Player instance { get; } = new Player();
     [SerializeField]
     private GameObject planetSelection;
