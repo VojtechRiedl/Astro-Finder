@@ -239,7 +239,7 @@ Animator:
   m_GameObject: {fileID: 524467092}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9e2130ca951963e4c8646dc13b3824f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 96998a433a6ac644ba980fb45aa0ad89, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -10157,7 +10157,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
