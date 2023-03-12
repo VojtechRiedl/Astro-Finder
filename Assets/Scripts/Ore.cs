@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ore : MonoBehaviour
 {
-    int a = 20;
+    int amount = 20;
     [SerializeField]
     private oretype type;
     enum oretype {
@@ -12,25 +12,24 @@ public class Ore : MonoBehaviour
     }
 
     public void GetMined() {
-        Debug.Log("mined");
         switch (type) {
             case oretype.iron:
-                Player.instance.resources.AddIron(a);
+                Player.instance.resources.AddIron(amount);
                 break;
             case oretype.copper:
-                Player.instance.resources.AddCopper(a);
+                Player.instance.resources.AddCopper(amount);
                 break;
             case oretype.ignium:
-                Player.instance.resources.AddIgnium(a);
+                Player.instance.resources.AddIgnium(amount);
                 break;
             case oretype.sensium:
-                Player.instance.resources.AddSensium(a);
+                Player.instance.resources.AddSensium(amount);
                 break;
             case oretype.uranium:
-                Player.instance.resources.AddUranium(a);
+                Player.instance.resources.AddUranium(amount);
                 break;
             case oretype.iridium:
-                Player.instance.resources.AddIridium(a);
+                Player.instance.resources.AddIridium(amount);
                 break;
         }
     }

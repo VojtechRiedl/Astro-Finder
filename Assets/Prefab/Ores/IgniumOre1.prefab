@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 1736867309799507728}
   - component: {fileID: 4611229533272962010}
   - component: {fileID: 5961758033864394916}
+  - component: {fileID: -3992564731867756133}
+  - component: {fileID: 4332545070041640378}
   m_Layer: 0
   m_Name: IgniumOre1
-  m_TagString: Untagged
+  m_TagString: res
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,8 +64,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3986188387995331715, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
   - {fileID: 2100000, guid: f3c5ee38f59ecef48b5ab74d3bcb742a, type: 2}
+  - {fileID: 3986188387995331715, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,3 +101,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
+--- !u!95 &-3992564731867756133
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2665740259553825295}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4332545070041640378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2665740259553825295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb373bd5481a7043a5fe97a76803e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2

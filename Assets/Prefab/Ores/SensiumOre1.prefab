@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 9037488239201490630}
   - component: {fileID: 6525554104435008012}
   - component: {fileID: -3243078647833251041}
+  - component: {fileID: 7364645745419423529}
   m_Layer: 0
   m_Name: SensiumOre1
-  m_TagString: Untagged
+  m_TagString: res
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,8 +63,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3986188387995331715, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
   - {fileID: 2100000, guid: f3420ec58a798174c87c76d094afc559, type: 2}
+  - {fileID: 3986188387995331715, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,3 +100,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
+--- !u!114 &7364645745419423529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724153492550140889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb373bd5481a7043a5fe97a76803e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 3

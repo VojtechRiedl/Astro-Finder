@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-
-    public static Player instance { get; private set; }
+    public class Player : MonoBehaviour {
+    public static Player instance { get; } = new Player();
     [SerializeField]
     private GameObject planetSelection;
     [SerializeField]
@@ -15,18 +15,17 @@ public class Player : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private GameObject upgrades;
-    [SerializeField]
-    private Stats stats;
-    public Resources resources;
 
     [SerializeField]
     private GameObject firstPlanet;
 
     
+    public Resources resources;
+    public Stats stats;
     bool active = false;
 
     // Start is called before the first frame update
-
+    
     [SerializeField]
     private Rigidbody playerRigid;
 
@@ -79,6 +78,6 @@ public class Player : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
 
-
+        
     }
 }

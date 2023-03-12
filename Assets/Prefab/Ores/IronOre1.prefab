@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 9062590479448598308}
   - component: {fileID: 6494258073963467758}
   - component: {fileID: 8139781693102536362}
+  - component: {fileID: -200135840775536004}
   m_Layer: 0
   m_Name: IronOre1
-  m_TagString: Untagged
+  m_TagString: res
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,8 +63,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3986188387995331715, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
   - {fileID: 2100000, guid: d5879e7f0133c6940a1aa48f4a98abee, type: 2}
+  - {fileID: 3986188387995331715, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,3 +100,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: ef559ca4e94ff6e49bff8b5de2ee9ddf, type: 3}
+--- !u!114 &-200135840775536004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4692963289605452347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb373bd5481a7043a5fe97a76803e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
