@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlanetGeneration : MonoBehaviour
@@ -29,6 +30,16 @@ public class PlanetGeneration : MonoBehaviour
             player.ActualPlanet = SpawnPlanet();
         }
     }
+    private void FixedUpdate()
+    {
+        if(Input.GetKeyDown(KeyCode.U))
+        {
+            gameObject.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+            Time.timeScale = 0;
+        }
+    }
 
     private Planet SpawnPlanet()
     {
@@ -36,7 +47,8 @@ public class PlanetGeneration : MonoBehaviour
         isGenerated = true;
         planet = planet.GeneratePlanet();
         player.gameObject.transform.position = new Vector3(planet.SpawnPoint.gameObject.transform.position.x, planet.SpawnPoint.gameObject.transform.position.y, player.gameObject.transform.position.z);
-        if (planetyButtons != null)
+
+        if (planetyButtons != null) // button planety v telescopu
         {
             planetyButtons.MakeButtonPlanet(planet);
         }

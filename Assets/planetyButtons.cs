@@ -60,6 +60,7 @@ public class PlanetyButtons : MonoBehaviour
                 planetButton.GetComponent<Image>().sprite = defaultPlanet;
                 break;
         }
+
         void ButtonClicked()
         {
             planetNameText.text = planet.GetPlanetName();

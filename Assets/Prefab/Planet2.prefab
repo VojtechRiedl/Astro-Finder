@@ -178,6 +178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 644066250485086865}
+  planetName: proste mesic
+  planetType: winter
 --- !u!114 &6147988149677977640
 MonoBehaviour:
   m_ObjectHideFlags: 0

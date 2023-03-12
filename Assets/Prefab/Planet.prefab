@@ -78,8 +78,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 3012831521206490529}
-  planetName: 
-  planetType: 
+  planetName: Zluta picokoule
+  planetType: iradiated
 --- !u!114 &6044550259112658813
 MonoBehaviour:
   m_ObjectHideFlags: 0

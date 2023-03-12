@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 4962978833154239350}
+  planetName: pahorkatej mesic
+  planetType: earthquake
 --- !u!114 &3537320739138952723
 MonoBehaviour:
   m_ObjectHideFlags: 0
