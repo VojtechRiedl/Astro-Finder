@@ -44,7 +44,7 @@ public class Weapon : MonoBehaviour
                 }
                 else
                 {
-                    Res.GetComponent<Ore>().GetMined();
+                  //  Res.GetComponent<Ore>().GetMined();
                     Destroy(Res);
                 }
 

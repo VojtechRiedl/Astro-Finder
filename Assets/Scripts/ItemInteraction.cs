@@ -25,11 +25,11 @@ public class ItemInteraction : MonoBehaviour
 
         if(inRange)
         {
-            interact.SetActive(true);
+           // interact.SetActive(true);
         }
         else
         {
-            interact.SetActive(false);
+           // interact.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.E ) && inRange)
