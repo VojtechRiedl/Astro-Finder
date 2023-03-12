@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 2420668278748472904}
   - component: {fileID: 8634943412854709806}
   - component: {fileID: 3288925956138562501}
-  - component: {fileID: 2172501609886590161}
   m_Layer: 6
   m_Name: Planet8
   m_TagString: Planet
@@ -93,20 +92,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 2158331569775940005}
---- !u!64 &2172501609886590161
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7443105861395234691}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1001 &3181911500580346520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -238,6 +223,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa214d7fbc267a54285b6c21c317a175, type: 3}
+--- !u!1 &7397108471251440468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fa214d7fbc267a54285b6c21c317a175, type: 3}
+  m_PrefabInstance: {fileID: 7666999203435163141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &2633202328793612491
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397108471251440468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4711208715938537054, guid: fa214d7fbc267a54285b6c21c317a175, type: 3}
 --- !u!4 &7920739216857352686 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fa214d7fbc267a54285b6c21c317a175, type: 3}

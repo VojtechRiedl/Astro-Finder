@@ -5,6 +5,8 @@ using UnityEngine;
 public class Planet : MonoBehaviour
 {
     [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private string planetName;
+    [SerializeField] private string planetType; // tak co už
 
     private float timeToDestruction;
 
@@ -12,6 +14,7 @@ public class Planet : MonoBehaviour
     public GameObject SpawnPoint { get => spawnPoint; }
     public float TimeToDestruction { get => timeToDestruction; }
     public bool ReadyToDestroy { get => readyToDestroy; }
+    
 
     void Awake()
     {
@@ -20,7 +23,6 @@ public class Planet : MonoBehaviour
     
     void Update()
     {
-        Debug.Log("Makam more" + name);
         if (timeToDestruction > 0)
         {
             timeToDestruction -= Time.deltaTime;
@@ -45,5 +47,15 @@ public class Planet : MonoBehaviour
     {
         Debug.Log("Dead");
         DestroyImmediate(gameObject,true);
+    }
+
+    public string GetPlanetName()
+    {
+        return planetName;
+    }
+
+    public string GetPlanetType()
+    {
+        return planetType;
     }
 }
