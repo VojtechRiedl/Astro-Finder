@@ -12,6 +12,7 @@ public class PlanetManager : MonoBehaviour
     List<GameObject> planets = new List<GameObject>();
     [SerializeField]
     PlanetGeneration PlanetGeneration;
+    
 
     void Awake()
     {
@@ -64,13 +65,12 @@ public class PlanetManager : MonoBehaviour
     public Planet spawnRandomPlanet()
     {
         return generatedPlanets.ElementAt(UnityEngine.Random.Range(0, generatedPlanets.Count));
+
     }
     public void PlanetDestroyed(Planet p)
     {
         generatedPlanets.Remove(p);
         PlanetGeneration.IsGenerated = false;
-
-
     }
 
 }

@@ -28,7 +28,7 @@ public class ItemInteraction : MonoBehaviour
             }
         }
 
-        UiUpdate(hit);
+        //UiUpdate(hit);
     }
 
      void UiUpdate(RaycastHit hit)
