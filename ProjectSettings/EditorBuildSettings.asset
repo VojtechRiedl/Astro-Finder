@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 148a3e705df70544bbc44d37dfaaab7c
-  - enabled: 1
-    path: Assets/Scenes/TravelLoad.unity
-    guid: fabb7bae90ae38b46bd6a01e604a53c7
   m_configObjects: {}
