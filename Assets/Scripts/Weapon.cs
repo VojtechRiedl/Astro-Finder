@@ -34,7 +34,7 @@ public class Weapon : MonoBehaviour
         if (currentCooldown > 0) {
             currentCooldown -= Time.deltaTime;
         }
-        if (Input.GetMouseButtonDown(0) && currentCooldown <= 0) {
+        if (Input.GetMouseButton(0) && currentCooldown <= 0) {
             //Physics.Raycast(rayOrigin.position,  -rayOrigin.forward, 55);
             //Debug.DrawRay(rayOrigin.position,  -rayOrigin.forward * 55, Color.red);
             Ray ray = new Ray(rayOrigin.position, -rayOrigin.forward * 55);
@@ -48,7 +48,8 @@ public class Weapon : MonoBehaviour
                 }
                 else
                 {
-                    Res.GetComponent<Ore>().GetMined();
+                    mining.Stop();
+                    raycastHit.collider.gameObject.GetComponent<Ore>().GetMined();
                     collect.Play();
                     Destroy(Res);
                 }

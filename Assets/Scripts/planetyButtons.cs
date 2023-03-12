@@ -21,17 +21,19 @@ public class PlanetyButtons : MonoBehaviour
     [SerializeField] private Sprite defaultPlanet;
     [SerializeField] private Button emptyButton;
     [SerializeField] private GameObject buttonsParent;
+    private Planet planetToTeleport;
 
     public void MakeButtonPlanet(Planet planet)
     {
 
         Debug.Log("ButtonMade");
-        float buttonX = Random.Range(30, 580);
+        float buttonX = Random.Range(-650, 650);
         float buttonY = Random.Range(220, 400);
         Vector3 buttonPos = new Vector3(buttonX, buttonY, 0);
 
         Button planetButton = Instantiate(emptyButton, buttonPos, Quaternion.identity, buttonsParent.transform);
         planetButton.onClick.AddListener(delegate () { ButtonClicked(); });
+        planetButton.GetComponent<showInfo>().SetRealPlanet(planet);
 
         switch (planet.GetPlanetType())
         {
@@ -60,11 +62,46 @@ public class PlanetyButtons : MonoBehaviour
                 planetButton.GetComponent<Image>().sprite = defaultPlanet;
                 break;
         }
+
         void ButtonClicked()
         {
-            planetNameText.text = planet.GetPlanetName();
+            Planet pl = planetButton.GetComponent<showInfo>().GetRealPlanet();
+            Debug.Log("oznac na teleportaci" + planetButton.GetComponent<showInfo>().GetRealPlanet());
+
+            foreach (Transform child in buttonsParent.transform)
+            {
+                showInfo shin = child.GetComponent<showInfo>();
+
+                if (shin != null)
+                {
+                    shin.SetMarkedToTeleport(false);
+                }
+            }
+
+            planetButton.GetComponent<showInfo>().SetMarkedToTeleport(true);
 
         }
+        
 
+    }
+    public void GoButton()
+    {
+        foreach (Transform child in buttonsParent.transform)
+        {
+            showInfo shin = child.GetComponent<showInfo>();
+
+            if (shin != null && shin == true)
+            {
+                Debug.Log("teleporting to " + shin.GetRealPlanet());
+                // teleportation HERE
+
+
+
+
+
+
+
+            }
+        }
     }
 }
