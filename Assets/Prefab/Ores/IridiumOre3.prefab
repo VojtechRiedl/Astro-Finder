@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7775093116849237211}
   - component: {fileID: 5477039839791732753}
   - component: {fileID: -8374858506320672490}
+  - component: {fileID: -6962137209436870154}
   m_Layer: 0
   m_Name: IridiumOre3
-  m_TagString: Untagged
+  m_TagString: res
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,3 +100,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 85edbc77037f4ad4fba75faac241026d, type: 3}
+--- !u!114 &-6962137209436870154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6269757004913146308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb373bd5481a7043a5fe97a76803e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 5

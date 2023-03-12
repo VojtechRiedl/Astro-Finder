@@ -17,7 +17,10 @@ public class Weapon : MonoBehaviour
     private GameObject Res;
     private float currentCooldown;
     private float cooldown = 1;
-
+    [SerializeField]
+    private AudioSource mining;
+    [SerializeField]
+    private AudioSource collect;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,10 +44,13 @@ public class Weapon : MonoBehaviour
                 //raycast -> surky
                 if (raycastHit.transform.localScale.x > minScale) {
                     raycastHit.transform.localScale -= new Vector3(reductionSpeed, reductionSpeed, reductionSpeed);
+                    mining.Play();
                 }
                 else
                 {
-                  //  Res.GetComponent<Ore>().GetMined();
+                    mining.Stop();
+                    Res.GetComponent<Ore>().GetMined();
+                    collect.Play();
                     Destroy(Res);
                 }
 

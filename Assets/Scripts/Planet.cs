@@ -24,7 +24,7 @@ public class Planet : MonoBehaviour
 
     void Awake()
     {
-        timeToDestruction = Random.Range(480f, 900f);
+        timeToDestruction = Random.Range(40f, 52f);//Random.Range(480f, 900f); 
     }
     
     void Update()

@@ -5,11 +5,27 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
+    [SerializeField]
+    private AudioSource select;
     public void ClickStart() {
-        SceneManager.LoadScene("Scenes/MainScene");
+        select.Play();
+        Invoke("PlayScene", 0.15f);
+        
     }
 
     public void Exit() {
+        select.Play();
+        Invoke("EndGame", 0.15f);
+        
+    }
+
+    void PlayScene()
+    {
+        SceneManager.LoadScene("Scenes/MainScene");
+    }
+
+    void EndGame()
+    {
         Debug.Log("exit");
         Application.Quit();
     }

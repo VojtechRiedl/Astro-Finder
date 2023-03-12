@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 9192180349719530927}
   - component: {fileID: 6374238455979522405}
   - component: {fileID: -4512315258379611004}
+  - component: {fileID: 3061980841216825456}
   m_Layer: 0
   m_Name: IronOre2
-  m_TagString: Untagged
+  m_TagString: res
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,3 +100,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: bcc7e82362a2e92458fc92e050199423, type: 3}
+--- !u!114 &3061980841216825456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860831413536331952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb373bd5481a7043a5fe97a76803e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
