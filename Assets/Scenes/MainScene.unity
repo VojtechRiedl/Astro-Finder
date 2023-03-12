@@ -938,7 +938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 379329892}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: spawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2028,8 +2028,8 @@ Material:
     - _DisplacementSpeed: 0.93
     - _NoiseBottomHeight: 0.029
     - _NoiseBottomIntensity: 0.26
-    - _OffsetNoiseX: 0.74834716
-    - _OffsetNoiseY: -7.9664536
+    - _OffsetNoiseX: 0.13275361
+    - _OffsetNoiseY: -7.9219713
     - _StaticIntensity: 0.26
     - _UseChromaticAberration: 1
     - _UseDisplacement: 1
@@ -2037,7 +2037,7 @@ Material:
     - _UseVignette: 0
     - _Vignette: 0.1
     m_Colors:
-    - _OffsetPos: {r: 0, g: -3.9460897e-20, b: 0, a: 0}
+    - _OffsetPos: {r: 0, g: -0.0000000030884983, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!1 &1116608684
 GameObject:
@@ -2842,7 +2842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 19644643a6d6d8049b087870269514e5, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 19644643a6d6d8049b087870269514e5, type: 3}
       propertyPath: m_TagString
