@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -2998086453798810282}
   m_Layer: 0
   m_Name: IgniumOre3
-  m_TagString: Untagged
+  m_TagString: res
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
